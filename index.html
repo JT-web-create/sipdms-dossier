@@ -1,14 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SIPDMS · Le dossier en détail</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="w"><small>COLLÈGE ADVENTISTE DE YAOUNDÉ · TERMINALE C · 2026–2027</small>
-<h1>SIPDMS</h1><h2>Système Intelligent de Prévention de la Délinquance en Milieu Scolaire</h2>
-<i>De signaux dispersés à des situations comprises, pour permettre une intervention humaine plus précoce.</i>
-<p>Équipe : Bohol, See, Djeugoué, Adzengue, Ntiam · Encadrement : Mr Wanki</p></div></header>
-<nav><div class="w"><a href="#prevention">Comment SIPDMS prévient</a><a href="#detail">Approfondir</a><a href="#preuve">La preuve</a><a href="#ethique">Éthique</a><a href="#faq">FAQ</a><a href="#annexes">Annexes</a><a href="#glossaire">Glossaire</a><a href="#sources">Sources</a><a href="#documents">Documents</a></div></nav>
-<main class="w">
+<title>SIPDMS</title><style>:root{--navy:#0a1a33;--gold:#d4a93c;--blue:#1f6feb;--green:#2e9e6b;--red:#d64545;--cream:#f7ebc8;--mint:#ddf3e8;--rose:#fbe3e2;--sky:#dce9fb;--paper:#f3f7fc;--ink:#16233b;--mute:#5b6b82}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;font:17px/1.65 Calibri,Carlito,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff}
+.w{max-width:900px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;padding:56px 0 44px;border-bottom:4px solid var(--gold)}
+header small{color:var(--gold);letter-spacing:.14em;font-weight:700}
+header h1{font-size:clamp(44px,9vw,72px);margin:6px 0;line-height:1}
+header h2{font-size:22px;font-weight:600;margin:0 0 14px;color:#cfdcf5}
+header i{color:#cfdcf5}
+nav{position:sticky;top:0;background:var(--navy);z-index:9;overflow-x:auto;white-space:nowrap;border-bottom:1px solid #26406e}
+nav a{display:inline-block;padding:13px 14px;color:#cfdcf5;text-decoration:none;font-size:14px;font-weight:600}
+nav a:hover{color:var(--gold)}
+section{padding:36px 0 8px}
+h3.bar{background:var(--navy);color:#fff;padding:12px 18px;font-size:24px;margin:0 0 16px;border-radius:4px}
+h3.bar b{color:var(--gold);margin-right:8px}
+h4{color:var(--blue);font-size:19px;margin:24px 0 6px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:18px 0}
+.kpi div{background:var(--navy);color:#fff;padding:14px;border-radius:6px}.kpi b{display:block;color:var(--gold);font-size:32px}
+.box{padding:12px 16px;margin:14px 0;border-left:5px solid var(--gold);background:var(--cream);border-radius:3px}
+.box.g{border-color:var(--green);background:var(--mint)}.box.r{border-color:var(--red);background:var(--rose)}.box.b{border-color:var(--blue);background:var(--sky)}
+.box>b:first-child{display:block;color:var(--navy)}
+figure{margin:18px 0;text-align:center}figure img{max-width:100%;border:1px solid #dde4ef;border-radius:6px}
+figcaption{font-size:14px;color:var(--mute);font-style:italic;margin-top:6px}figcaption b{color:var(--blue);font-style:normal}
+details{border:1px solid #dde4ef;border-radius:6px;margin:8px 0;background:var(--paper);padding:0 16px}
+summary{cursor:pointer;font-weight:700;padding:12px 0;color:var(--navy)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 0}
+.tabs button{font:inherit;font-weight:700;border:0;padding:11px 18px;border-radius:6px 6px 0 0;background:var(--sky);color:var(--navy);cursor:pointer}
+.tabs button.on{background:var(--navy);color:var(--gold)}
+.pane{display:none;border:2px solid var(--navy);padding:6px 18px 14px;border-radius:0 6px 6px 6px}.pane.on{display:block}
+.calc{background:var(--paper);border:1px solid #dde4ef;border-radius:6px;padding:16px}
+.calc label{display:block;margin:8px 0}.calc input{width:100%;accent-color:var(--gold)}
+.res{font-size:20px;font-weight:700;color:var(--navy);margin-top:10px}
+table{border-collapse:collapse;width:100%;font-size:15px}th{background:var(--navy);color:#fff}th,td{border:1px solid #dde4ef;padding:8px 10px;text-align:left}
+.tw{overflow-x:auto}pre{background:var(--navy);color:#e6ecf7;padding:14px;border-radius:6px;overflow-x:auto;font-size:13px}
+dt{font-weight:700;color:var(--navy);margin-top:10px}dd{margin:0;color:var(--mute)}
+.src p{font-size:14px;word-break:break-word}a{color:var(--blue)}
+footer{background:var(--navy);color:#9db0cc;text-align:center;padding:26px 20px;margin-top:40px;font-size:14px;border-top:4px solid var(--gold)}
 
-<section id="prevention"><h3 class="bar"><b>→</b>Comment SIPDMS prévient : le cas d'une bagarre derrière le bâtiment B</h3>
+body{background:#06101f;color:#e6ecf7;font-family:Calibri,Carlito,"Segoe UI",system-ui,Arial,sans-serif}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(800px 480px at 85% -5%,rgba(53,208,255,.14),transparent 60%),radial-gradient(circle,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/28px 28px}
+.w{max-width:1040px}.view .w{max-width:900px}
+.top{position:sticky;top:0;z-index:20;background:rgba(6,16,31,.92);backdrop-filter:blur(10px);border-bottom:1px solid #1d3256}
+.top .w{display:flex;align-items:center;gap:16px;max-width:1040px}
+.brand{font:700 21px Georgia,serif;color:#fff;text-decoration:none;padding:11px 0;letter-spacing:.04em}.brand b{color:var(--gold)}
+.pills{display:flex;gap:4px;overflow-x:auto;white-space:nowrap;padding:6px 0;scrollbar-width:none}
+.pills a{color:#9db0cc;text-decoration:none;font-size:14px;font-weight:600;padding:7px 12px;border-radius:99px}
+.pills a:hover{color:#fff}.pills a.on{background:#16305c;color:var(--gold)}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #35d0ff;outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;padding:56px 0 28px}
+.hero h1{font:700 clamp(56px,11vw,104px)/.95 Georgia,serif;margin:0 0 14px;color:#fff;letter-spacing:.02em}
+.hero h2{font-size:21px;font-weight:600;color:#cfdcf5;margin:0 0 12px;max-width:30ch}
+.hero p{color:#9db0cc;margin:0 0 8px;max-width:52ch}.hero .tg{font-style:italic;color:#cfdcf5}
+.go{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.go a{padding:12px 20px;border-radius:8px;font-weight:700;text-decoration:none;color:#e6ecf7;border:1px solid #2c4a80}
+.go a.p{background:var(--gold);border-color:var(--gold);color:#0a1a33}.go a:hover{border-color:var(--gold)}
+.net{width:100%;max-width:380px;justify-self:center;overflow:visible}
+.ln path{stroke-dasharray:200;stroke-dashoffset:200;animation:dr 1.6s .3s ease-out forwards}
+.far{opacity:.55}.halo{transform-origin:200px 150px;animation:pu 3s 1.8s ease-out infinite;opacity:0}
+@keyframes dr{to{stroke-dashoffset:0}}@keyframes pu{0%{opacity:.8;transform:scale(.6)}100%{opacity:0;transform:scale(1.5)}}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:1px solid #1d3256;border-bottom:1px solid #1d3256;margin:20px 0 36px}
+.steps div{padding:16px 18px;border-left:1px solid #1d3256;color:#9db0cc;font-size:15px}.steps div:first-child{border-left:0}
+.steps b{display:block;color:#fff;font:700 18px Georgia,serif;margin-bottom:2px}.steps b span{color:var(--gold)}
+.home h2.t{font:700 26px Georgia,serif;margin:0 0 14px;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.card{display:block;padding:18px 20px;border:1px solid #243c66;border-radius:10px;background:#0b1d3d;color:#e6ecf7;text-decoration:none}
+.card h3{margin:0 0 4px;font:700 19px Georgia,serif;color:#fff}.card p{margin:0;color:#9db0cc;font-size:15px;line-height:1.5}
+.card:hover{border-color:var(--gold)}.card.lead{grid-column:1/-1;background:linear-gradient(100deg,#13306a,#0b1d3d);border-color:#35d0ff}
+.card.lead h3{font-size:25px}.card.lead p{font-size:17px;max-width:60ch}
+.note{margin:34px 0 0;padding:18px 0 0;border-top:1px solid #1d3256;color:#9db0cc;max-width:70ch}.note a{color:var(--gold)}
+.view{padding:0}.back{display:inline-block;margin:26px 0 8px;color:#9db0cc;text-decoration:none;font-weight:600}.back:hover{color:var(--gold)}
+.view h2{font:700 clamp(26px,5vw,38px)/1.15 Georgia,serif;color:#fff;margin:0 0 18px}
+.sheet{background:#fff;color:var(--ink);border-radius:12px;padding:6px 28px 26px}.sheet h4:first-child{margin-top:20px}
+.pn{display:flex;justify-content:space-between;gap:12px;margin:22px 0 0}.pn a{color:#cfdcf5;text-decoration:none;font-weight:600;padding:10px 14px;border:1px solid #2c4a80;border-radius:8px}.pn a:hover{border-color:var(--gold);color:#fff}
+.foot{background:transparent;border-top:1px solid #1d3256;margin-top:48px;padding:26px 20px;text-align:center;color:#9db0cc;font-size:14px}
+@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:30px}.net{max-width:260px}.sheet{padding:2px 16px 20px}.top .w{gap:8px}}
+@media(prefers-reduced-motion:reduce){.ln path{animation:none;stroke-dashoffset:0}.halo{animation:none}}
+
+.view h2 .n{color:var(--gold);font-size:.55em;vertical-align:.2em;margin-right:.3em}
+.dl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:8px 0 16px}
+a.dl{display:block;padding:16px 18px;border:2px solid var(--navy);border-radius:8px;background:var(--paper);
+color:var(--ink);text-decoration:none;transition:.15s}
+a.dl b{display:block;color:var(--navy);font:700 19px Georgia,serif}
+a.dl span{display:block;color:var(--mute);font-size:14px;margin-top:3px}
+a.dl:hover{border-color:var(--gold);transform:translateY(-2px)}
+#v-sources .sheet p{font-size:15px}
+</style></head><body>
+<div class="top"><div class="w"><a class="brand" href="#/">SIPD<b>M</b>S</a><nav class="pills"><a href="#/prevention" data-k="prevention">Le cas concret</a><a href="#/detail" data-k="detail">Fonctionnement</a><a href="#/preuve" data-k="preuve">La preuve</a><a href="#/ethique" data-k="ethique">Éthique et cadre légal</a><a href="#/faq" data-k="faq">FAQ du jury</a><a href="#/annexes" data-k="annexes">Annexes</a><a href="#/glossaire" data-k="glossaire">Glossaire</a><a href="#/sources" data-k="sources">Sources</a><a href="#/documents" data-k="documents">Documents</a></nav></div></div>
+<main>
+<div class="home" id="v-home"><div class="w">
+<div class="hero"><div><h1>SIPDMS</h1><h2>Système Intelligent de Prévention de la Délinquance en Milieu Scolaire</h2>
+<p class="tg">De signaux dispersés à des situations comprises, pour permettre une intervention humaine plus précoce.</p>
+<p>Collège Adventiste de Yaoundé, Terminale C, 2026–2027. Équipe : Bohol, See, Djeugoué, Adzengue, Ntiam. Encadrement : Mr Wanki.</p>
+<div class="go"><a class="p" href="#/prevention">Voir le cas concret</a><a href="#/faq">Les questions du jury</a><a href="#/preuve">La preuve chiffrée</a><a href="#/documents">Télécharger le dossier (Word)</a></div></div><svg class="net" viewBox="0 0 360 300" aria-hidden="true"><g class="far" fill="#35d0ff"><circle cx="40" cy="60" r="5"/><circle cx="95" cy="230" r="5"/><circle cx="60" cy="150" r="5"/><circle cx="170" cy="30" r="5"/><circle cx="150" cy="265" r="5"/><circle cx="300" cy="40" r="5"/><circle cx="330" cy="250" r="5"/></g><g class="ln" stroke="#35d0ff" stroke-width="1.5" fill="none"><path d="M40 60L200 150"/><path d="M95 230L200 150"/><path d="M60 150L200 150"/><path d="M170 30L200 150"/><path d="M150 265L200 150"/><path d="M300 40L200 150"/><path d="M330 250L200 150"/></g><circle class="hub" cx="200" cy="150" r="13" fill="#d4a93c"/><circle class="halo" cx="200" cy="150" r="26" fill="none" stroke="#d4a93c" stroke-width="1.5"/></svg></div>
+<div class="steps"><div><b><span>1</span> Signaler</b>Borne, boîte papier ou adulte, sans téléphone.</div><div><b><span>2</span> Relier</b>Lieu, créneau, au moins deux sources indépendantes.</div><div><b><span>3</span> Alerter</b>Une invitation à vérifier, jamais une preuve.</div><div><b><span>4</span> Décider</b>Toujours un adulte, jamais l'IA.</div></div>
+<h2 class="t">Explorer le projet</h2><div class="grid"><a class="card lead" href="#/prevention"><h3>Le cas concret</h3><p>Une bagarre derrière le bâtiment B : ce que SIPDMS fait avant, pendant et après.</p></a><a class="card" href="#/detail"><h3>Fonctionnement</h3><p>Où intervient l'IA, les canaux sans téléphone, le calculateur de priorité.</p></a><a class="card" href="#/preuve"><h3>La preuve</h3><p>Un lycée simulé, trois configurations comparées, des limites assumées.</p></a><a class="card" href="#/ethique"><h3>Éthique et cadre légal</h3><p>Ce que nous collectons, ce que nous ne collectons pas, les lois.</p></a><a class="card" href="#/faq"><h3>FAQ du jury</h3><p>Quinze questions difficiles, des réponses courtes.</p></a><a class="card" href="#/annexes"><h3>Annexes</h3><p>Charte d'usage, mini-enquête, fiche de test, guide de soutenance.</p></a><a class="card" href="#/glossaire"><h3>Glossaire</h3><p>Les mots techniques expliqués simplement.</p></a><a class="card" href="#/sources"><h3>Sources</h3><p>Références et textes de loi.</p></a><a class="card" href="#/documents"><h3>Documents</h3><p>Les deux dossiers Word à télécharger : synthèse et complet.</p></a></div>
+<p class="note">Prototype pédagogique, données fictives. Sur le lycée simulé, la corrélation fait passer la précision de 46 % à 77 %. Détails et limites dans <a href="#/preuve">La preuve</a>.</p>
+</div></div>
+<section class="view" id="v-prevention" hidden><div class="w"><a class="back" href="#/">← Portail</a><h2><span class="n">→</span>Comment SIPDMS prévient : le cas d'une bagarre derrière le bâtiment B</h2><div class="sheet">
 <p>Imaginons des élèves qui se rassemblent derrière le bâtiment B, à la récréation de midi, et une bagarre qui éclate. SIPDMS n'a pas de boule de cristal : il agit à trois moments, et un adulte décide à chacun.</p>
 <div class="tabs"><button class="on" data-t="p1">1 · Avant</button><button data-t="p2">2 · Pendant</button><button data-t="p3">3 · Après</button></div>
 <div class="pane on" id="p1"><h4>Avant : repérer ce qui se prépare</h4>
@@ -23,18 +112,17 @@
 <p>Parcours d'aide ouvert pour la victime : <b>écoute</b> par un adulte formé (code de suivi si l'élève veut rester anonyme), <b>protection immédiate</b> sans fuite ni représailles, <b>médiation ou accompagnement</b>, <b>suivi à deux semaines</b>.</p>
 <p>L'adulte <b>qualifie l'alerte</b> (pertinente, fausse, à surveiller, insuffisamment documentée) : les seuils se calibrent. L'incident enrichit l'historique du <b>lieu et du créneau</b>, pas celui d'un élève : aucun score, aucune liste, aucune sanction automatique.</p>
 <div class="box r"><b>Limite honnête</b>Une bagarre soudaine et sans signal préalable ne sera pas évitée. SIPDMS ne prédit pas l'avenir d'un élève : il aide les adultes à voir plus tôt ce qui peut l'être, et à réagir plus vite quand il est trop tard pour prévenir.</div></div>
-<figure><img src="assets/fig15.png" alt="Boucle de prévention"><figcaption><b>Figure 15</b> — La boucle de prévention : détecter, intervenir, mesurer, comparer, adapter.</figcaption></figure>
-<figure><img src="assets/fig9.png" alt="Deux voies"><figcaption><b>Figure 9</b> — Voie rapide pour l'urgence, voie lente pour les tendances.</figcaption></figure>
-</section>
-
-<section id="detail"><h3 class="bar"><b>1</b>Approfondir le fonctionnement</h3>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig15.png" alt="Boucle de prévention"><figcaption><b>Figure 15</b> — La boucle de prévention : détecter, intervenir, mesurer, comparer, adapter.</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig9.png" alt="Deux voies"><figcaption><b>Figure 9</b> — Voie rapide pour l'urgence, voie lente pour les tendances.</figcaption></figure>
+</div><div class="pn"><span></span><a href="#/detail">Fonctionnement →</a></div></div></section>
+<section class="view" id="v-detail" hidden><div class="w"><a class="back" href="#/">← Portail</a><h2><span class="n">1</span>Approfondir le fonctionnement</h2><div class="sheet">
 <h4>Le problème d'information</h4><p>Chaque adulte détient une pièce du puzzle ; personne n'a le puzzle entier, et quand il apparaît c'est souvent trop tard. Délinquance ≠ infraction au règlement : un retard isolé ne produit rien ; dix sorties non autorisées par la même porte renseignent sur la porte, pas sur dix élèves.</p>
-<figure><img src="assets/fig2.png" alt=""><figcaption><b>Figure 2</b> — La situation actuelle : informations isolées, contexte perdu, réaction tardive.</figcaption></figure>
-<figure><img src="assets/fig4.png" alt=""><figcaption><b>Figure 4</b> — Application classique et SIPDMS : de l'enregistrement à la compréhension.</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig2.png" alt=""><figcaption><b>Figure 2</b> — La situation actuelle : informations isolées, contexte perdu, réaction tardive.</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig4.png" alt=""><figcaption><b>Figure 4</b> — Application classique et SIPDMS : de l'enregistrement à la compréhension.</figcaption></figure>
 <div class="box"><b>Les quatre limites des approches classiques</b>Stocker n'est pas comprendre (rapprocher trois témoignages écrits à des jours différents demande du temps que personne n'a) · la mémoire des adultes est fragile · une caméra voit mais ne comprend pas, coûte cher et filme des mineurs · la sanction arrive après l'acte, alors que prévenir demande de repérer ce qui se prépare.</div>
 <h4>Conçu pour un collège sans téléphones</h4>
 <p>Tout passe par du matériel de l'école ou des canaux hors temps de classe. À chaque signalement, l'élève reçoit un <b>code de suivi</b> papier pour lire la réponse et répondre, sans révéler son identité. La borne est placée dans un lieu très fréquenté et neutre, hors du champ de vue des adultes concernés ; le personnel voit un créneau, jamais une heure précise.</p>
-<figure><img src="assets/fig6.png" alt=""><figcaption><b>Figure 6</b> — Quatre canaux de signalement sans appareil d'élève pendant les cours.</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig6.png" alt=""><figcaption><b>Figure 6</b> — Quatre canaux de signalement sans appareil d'élève pendant les cours.</figcaption></figure>
 <h4>Où intervient l'IA</h4>
 <dl><dt>Moteur de règles (sans IA)</dt><dd>Pass trop long, mot d'urgence, seuil dépassé : explicite, vérifiable, prévisible.</dd>
 <dt>TALN</dt><dd>Extrait type de situation, lieu et créneau de textes libres en français, anglais ou français familier.</dd>
@@ -43,7 +131,7 @@
 <dt>Détection d'anomalies</dt><dd>Zone ou créneau qui s'écarte de son fonctionnement habituel (Chandola, Banerjee et Kumar, 2009).</dd>
 <dt>Corrélation multi-sources</dt><dd>Le cœur : fusionner signalement, lieu, créneau, autorisation et historique.</dd></dl>
 <div class="box"><b>Camfranglais : une limite assumée</b>Les modèles multilingues couvrent mal le camfranglais. Piste : un petit corpus rédigé par les élèves de l'équipe, mesure de la qualité du rapprochement, lexique local si besoin. La simulation n'emploie qu'un français familier simplifié.</div>
-<figure><img src="assets/fig10.png" alt=""><figcaption><b>Figure 10</b> — La boucle de retour : l'humain qualifie l'alerte, le système se calibre.</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig10.png" alt=""><figcaption><b>Figure 10</b> — La boucle de retour : l'humain qualifie l'alerte, le système se calibre.</figcaption></figure>
 <h4>Calculateur : priorité de situation</h4>
 <p>Priorité de situation = gravité × (répétition + indépendance des sources + concentration lieu-créneau). Elle porte sur un triplet lieu · créneau · type de situation, jamais sur une personne. Essayez (valeurs illustratives).</p>
 <div class="calc"><label>Gravité (1 à 3) : <b id="gv"></b><input id="g" type="range" min="1" max="3" value="2"></label>
@@ -54,30 +142,27 @@
 <h4>Normaliser par le niveau d'observation</h4><p>Taux normalisé = incidents signalés ÷ niveau d'observation de la zone. Sans cela, un coin très surveillé paraît « dangereux » parce qu'on y regarde (Lum et Isaac, 2016).</p>
 <h4>Prévention, mesure, rôles</h4>
 <p>Pistes supplémentaires : sensibilisation ciblée sans désigner de personnes ; réaménagement d'un espace ou d'un horaire. Deux idées pour aller plus loin : un <b>simulateur « et si ? »</b> (hypothèse explicite et modifiable, pas une prédiction) et une <b>enquête de climat scolaire</b> avant/après. Trois rôles : <b>élève</b> (signaler, suivre, demander de l'aide), <b>surveillant</b> (vérifier, intervenir, qualifier), <b>direction</b> (tendances agrégées, cartes, effet des actions) ; extensions : enseignant et administrateur.</p>
-<figure><img src="assets/fig16.png" alt=""><figcaption><b>Figure 16</b> — Modèle jouet : l'effet de −50 % est une hypothèse ; la méthode de mesure, elle, est testée.</figcaption></figure>
-<figure><img src="assets/fig17.png" alt=""><figcaption><b>Figure 17</b> — Maquette du tableau de bord (données simulées).</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig16.png" alt=""><figcaption><b>Figure 16</b> — Modèle jouet : l'effet de −50 % est une hypothèse ; la méthode de mesure, elle, est testée.</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig17.png" alt=""><figcaption><b>Figure 17</b> — Maquette du tableau de bord (données simulées).</figcaption></figure>
 <h4>Faisabilité et roadmap</h4>
 <p>Python, pandas, scikit-learn, embeddings pré-entraînés ; serveur local sans dépendre d'Internet, procédure papier en cas de coupure ; cinq pôles (interface et collecte · règles et passes · TALN et similarité · corrélation et données simulées · évaluation, éthique, rédaction). Démo de 5 minutes : un signalement à la borne, la tendance détectée avec ses raisons, la carte de chaleur, puis un pass resté ouvert. Du V0 au V5, avec un <b>pilote en « mode ombre »</b> avant tout usage réel.</p>
-<figure><img src="assets/fig22.png" alt=""><figcaption><b>Figure 22</b> — Pile technique : locale, libre, exécutable sur un ordinateur ordinaire.</figcaption></figure>
-<figure><img src="assets/fig23.png" alt=""><figcaption><b>Figure 23</b> — De V0 à V5 : la vidéo n'apparaît qu'en toute fin, en option.</figcaption></figure></section>
-
-<section id="preuve"><h3 class="bar"><b>2</b>La preuve, sans la surestimer</h3>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig22.png" alt=""><figcaption><b>Figure 22</b> — Pile technique : locale, libre, exécutable sur un ordinateur ordinaire.</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig23.png" alt=""><figcaption><b>Figure 23</b> — De V0 à V5 : la vidéo n'apparaît qu'en toute fin, en option.</figcaption></figure></div><div class="pn"><a href="#/prevention">← Le cas concret</a><a href="#/preuve">La preuve →</a></div></div></section>
+<section class="view" id="v-preuve" hidden><div class="w"><a class="back" href="#/">← Portail</a><h2><span class="n">2</span>La preuve, sans la surestimer</h2><div class="sheet">
 <p>Lycée simulé : 20 jours, 7 zones, environ 60 signalements, 300 passes, 13 situations de vérité connue (3 harcèlements, 2 vandalismes, 4 urgences, 4 bien-être) et du bruit réaliste dont 2 campagnes malveillantes. Catégorie correcte dans 60 % des cas, zone dans 70 %. Textes : français 60 %, anglais 20 %, familier 20 %.</p>
-<figure><img src="assets/fig18.png" alt=""><figcaption><b>Figure 18</b> — Le lycée simulé : zones, niveaux d'observation, incidents injectés.</figcaption></figure>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig18.png" alt=""><figcaption><b>Figure 18</b> — Le lycée simulé : zones, niveaux d'observation, incidents injectés.</figcaption></figure>
 <div class="tw"><table><tr><th>Configuration</th><th>Précision</th><th>Détection</th><th>Fausses alertes / sem.</th><th>Délai (j)</th></tr>
 <tr><td>A · Règles seules</td><td>46 % ± 5</td><td>67 % ± 13</td><td>2,3 ± 0,1</td><td>1,9 ± 0,9</td></tr>
 <tr><td>B · + TALN</td><td>55 % ± 3</td><td>96 % ± 6</td><td>2,5 ± 0,2</td><td>1,8 ± 0,7</td></tr>
 <tr><td>C · + corrélation</td><td>77 % ± 6</td><td>95 % ± 6</td><td>0,9 ± 0,3</td><td>1,6 ± 0,8</td></tr></table></div>
 <p>Le TALN améliore la <b>détection</b> ; la corrélation améliore la <b>précision</b> ; le délai varie peu et nous ne revendiquons aucun gain de rapidité. Mini-test humain : 3 à 5 personnes, résultats à compléter.</p>
-<figure><img src="assets/fig20.png" alt=""><figcaption><b>Figure 20</b> — Trois niveaux à ne jamais confondre : prototype, simulation, déploiement réel.</figcaption></figure></section>
-
-<section id="ethique"><h3 class="bar"><b>3</b>Éthique, limites, cadre légal</h3>
+<figure><img loading="lazy" onerror="this.closest('figure').style.display='none'" src="assets/fig20.png" alt=""><figcaption><b>Figure 20</b> — Trois niveaux à ne jamais confondre : prototype, simulation, déploiement réel.</figcaption></figure></div><div class="pn"><a href="#/detail">← Fonctionnement</a><a href="#/ethique">Éthique et cadre légal →</a></div></div></section>
+<section class="view" id="v-ethique" hidden><div class="w"><a class="back" href="#/">← Portail</a><h2><span class="n">3</span>Éthique, limites, cadre légal</h2><div class="sheet">
 <div class="box g"><b>Nous collectons</b>texte du signalement, zone, créneau · code de suivi aléatoire · heures d'un pass (effacées au retour) · qualification de l'adulte.</div>
 <div class="box r"><b>Nous ne collectons pas</b>nom du déclarant ou appareil · images, vidéos, empreintes, visages · score, profil ou historique individuel.</div>
 <p>Conservation courte fixée par la direction (purge des dossiers classés après un trimestre, à valider). Cadre : loi n° 2024/017 du 23 décembre 2024 (données personnelles) et loi n° 2010/012 du 21 décembre 2010 (cybersécurité). Nous ne sommes pas juristes : validation par un conseil juridique avant tout déploiement.</p>
-<p><b>Limites :</b> prototype et résultats simulés ; le langage reste difficile ; seuls les signalements remontent ; faux positifs et négatifs ; charge pour le personnel ; la technologie ne remplace pas la relation.</p></section>
-
-<section id="faq"><h3 class="bar"><b>4</b>FAQ du jury</h3>
+<p><b>Limites :</b> prototype et résultats simulés ; le langage reste difficile ; seuls les signalements remontent ; faux positifs et négatifs ; charge pour le personnel ; la technologie ne remplace pas la relation.</p></div><div class="pn"><a href="#/preuve">← La preuve</a><a href="#/faq">FAQ du jury →</a></div></div></section>
+<section class="view" id="v-faq" hidden><div class="w"><a class="back" href="#/">← Portail</a><h2><span class="n">4</span>FAQ du jury</h2><div class="sheet">
 <details><summary>Pourquoi utiliser l'IA ?</summary><p>Certains problèmes sont difficiles à la main : rapprocher des textes formulés différemment, repérer une répétition dans le temps et l'espace. Le pass de sortie reste un simple moteur de règles.</p></details>
 <details><summary>Pourquoi pas simplement un formulaire ?</summary><p>Un formulaire recueille, il ne relie pas. Sans analyse du texte libre, un tiers des situations échappe aux règles seules ; sans corrélation, les fausses alertes restent élevées.</p></details>
 <details><summary>Comment éviter les faux signalements ?</summary><p>Une alerte de tendance exige au moins deux sources indépendantes ; elle porte sur un lieu et une situation, et un adulte vérifie.</p></details>
@@ -92,9 +177,8 @@
 <details><summary>SIPDMS peut-il sanctionner ?</summary><p>Non : ni sanction ni score individuel ; une alerte ne vaut pas preuve.</p></details>
 <details><summary>Comment prouvez-vous l'apport de l'IA ?</summary><p>Trois configurations sur un lycée simulé : le TALN améliore la détection, la corrélation la précision. Résultats de simulation.</p></details>
 <details><summary>Comment mesurez-vous la prévention ?</summary><p>Avant/après avec zones témoins et enquête de climat anonyme si la direction l'autorise.</p></details>
-<details><summary>Si le système se trompe ?</summary><p>L'alerte invite à vérifier ; l'adulte la qualifie, ce qui calibre les seuils ; les raisons sont affichées et l'historique tracé.</p></details></section>
-
-<section id="annexes"><h3 class="bar"><b>5</b>Annexes</h3>
+<details><summary>Si le système se trompe ?</summary><p>L'alerte invite à vérifier ; l'adulte la qualifie, ce qui calibre les seuils ; les raisons sont affichées et l'historique tracé.</p></details></div><div class="pn"><a href="#/ethique">← Éthique et cadre légal</a><a href="#/annexes">Annexes →</a></div></div></section>
+<section class="view" id="v-annexes" hidden><div class="w"><a class="back" href="#/">← Portail</a><h2><span class="n">5</span>Annexes</h2><div class="sheet">
 <h4>A · Charte d'usage</h4><ol><li>Une alerte est une invitation à vérifier, jamais une preuve.</li><li>J'utilise SIPDMS pour protéger et prévenir, jamais pour punir automatiquement.</li><li>Je ne cherche pas à identifier qui a signalé et ne transmets l'alerte à personne de mis en cause.</li><li>Je ne constitue aucun classement, score ou liste d'élèves.</li><li>Je qualifie chaque alerte traitée.</li><li>Je ne consulte que le nécessaire à mon rôle ; mes consultations sont journalisées.</li><li>Je protège la confidentialité et signale toute fuite.</li><li>Je respecte les durées de conservation et la purge.</li><li>Je décide en humain : dialogue, écoute, médiation avant toute sanction.</li><li>J'accepte l'audit et la suspension de l'usage en cas de dérive.</li></ol>
 <h4>B · Mini-enquête anonyme</h4><p>Avec l'accord écrit de la direction, volontariat, sans nom. Réponses : jamais / une fois / plusieurs fois ce mois.</p><ul><li>Je me suis senti(e) en insécurité dans un lieu de l'établissement. Lequel ?</li><li>On m'a insulté(e) ou humilié(e) de façon répétée par d'autres élèves.</li><li>On m'a pris de l'argent ou des affaires par la force ou la menace.</li><li>J'ai été témoin d'une situation grave et je n'ai pas osé en parler.</li><li>Je saurais à qui m'adresser si j'avais un problème (oui / non / peut-être).</li><li>Je ferais confiance à un système de signalement anonyme (oui / non / peut-être, pourquoi ?).</li></ul>
 <h4>C · Fiche de passation du mini-test</h4><p>3 à 5 personnes, trois dossiers fictifs aux traces dispersées. Tâche : retrouver quoi, où, quand, quels événements liés.</p><ol><li>Expliquer la tâche.</li><li>Méthode manuelle sur l'incident 1 : chronométrer, noter.</li><li>Méthode SIPDMS sur l'incident 2 : chronométrer, noter.</li><li>Alterner l'ordre entre participants.</li><li>« Avez-vous compris pourquoi l'alerte est apparue ? » (oui / en partie / non).</li></ol><p>Test indicatif, pas statistique.</p>
@@ -105,26 +189,50 @@
 model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
 a = "On m'insulte souvent près du bâtiment B."
 b = "Ils recommencent encore à la sortie."
-score = util.cos_sim(model.encode(a), model.encode(b))</pre></section>
-
-<section id="glossaire"><h3 class="bar"><b>6</b>Glossaire</h3><dl>
-<dt>TALN / NLP</dt><dd>Méthodes pour traiter du texte écrit.</dd><dt>Embedding</dt><dd>Phrase représentée par des nombres ; sens proche = nombres proches.</dd><dt>Similarité sémantique</dt><dd>Proximité de sens entre deux textes.</dd><dt>Corrélation multi-sources</dt><dd>Rapprochement d'informations de sources différentes.</dd><dt>Moteur de règles</dt><dd>Règles écrites à l'avance (si… alors…), sans apprentissage.</dd><dt>Détection d'anomalies</dt><dd>Repérage de ce qui s'écarte du fonctionnement habituel.</dd><dt>Faux positif / négatif</dt><dd>Alerte à tort / situation réelle non détectée.</dd><dt>Précision / rappel</dt><dd>Part des alertes justifiées / part des situations détectées.</dd><dt>Normalisation</dt><dd>Division par un niveau de référence pour comparer équitablement.</dd><dt>Mode ombre</dt><dd>Fonctionnement en parallèle, sans conséquence.</dd><dt>Données synthétiques</dt><dd>Fabriquées par programme ; ne décrivent aucune personne réelle.</dd></dl></section>
-
-<section id="sources" class="src"><h3 class="bar"><b>7</b>Sources</h3>
+score = util.cos_sim(model.encode(a), model.encode(b))</pre></div><div class="pn"><a href="#/faq">← FAQ du jury</a><a href="#/glossaire">Glossaire →</a></div></div></section>
+<section class="view" id="v-glossaire" hidden><div class="w"><a class="back" href="#/">← Portail</a><h2><span class="n">6</span>Glossaire</h2><div class="sheet"><dl>
+<dt>TALN / NLP</dt><dd>Méthodes pour traiter du texte écrit.</dd><dt>Embedding</dt><dd>Phrase représentée par des nombres ; sens proche = nombres proches.</dd><dt>Similarité sémantique</dt><dd>Proximité de sens entre deux textes.</dd><dt>Corrélation multi-sources</dt><dd>Rapprochement d'informations de sources différentes.</dd><dt>Moteur de règles</dt><dd>Règles écrites à l'avance (si… alors…), sans apprentissage.</dd><dt>Détection d'anomalies</dt><dd>Repérage de ce qui s'écarte du fonctionnement habituel.</dd><dt>Faux positif / négatif</dt><dd>Alerte à tort / situation réelle non détectée.</dd><dt>Précision / rappel</dt><dd>Part des alertes justifiées / part des situations détectées.</dd><dt>Normalisation</dt><dd>Division par un niveau de référence pour comparer équitablement.</dd><dt>Mode ombre</dt><dd>Fonctionnement en parallèle, sans conséquence.</dd><dt>Données synthétiques</dt><dd>Fabriquées par programme ; ne décrivent aucune personne réelle.</dd></dl></div><div class="pn"><a href="#/annexes">← Annexes</a><a href="#/sources">Sources →</a></div></div></section>
+<section class="view" id="v-sources" hidden><div class="w"><a class="back" href="#/">← Portail</a><h2><span class="n">7</span>Sources</h2><div class="sheet">
 <p>UNESCO (2019). <i>Behind the numbers: Ending school violence and bullying</i>. <a href="https://unesdoc.unesco.org/ark:/48223/pf0000366483">unesdoc.unesco.org</a></p>
 <p>Analyse multi-pays GSHS 2010–2017, 11 pays, prévalence 38,8 %. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8252267/">PMC8252267</a></p>
 <p><i>Violences genrées en milieu scolaire au Cameroun (2015–2024)</i>, European Scientific Journal, 2025. <a href="https://eujournal.org/index.php/esj/article/view/19596">eujournal.org</a></p>
 <p>Cameroon Tribune (2022). <a href="https://www.cameroon-tribune.cm/article.html/47513/fr.html/violences-en-milieu-scolaire-la-cote-dalerte">Violences en milieu scolaire : la cote d'alerte !</a></p>
 <p>Loi n° 2024/017 du 23 décembre 2024. <a href="https://www.juriafrica.com/lex/link/loi-2024-017-23-decembre-2024/56221.htm">juriafrica.com</a> · Loi n° 2010/012 du 21 décembre 2010.</p>
-<p>Reimers et Gurevych (2019 ; 2020) · Chandola, Banerjee et Kumar (2009) · Weisburd (2015) · Lum et Isaac (2016) · OMS (2016), INSPIRE.</p></section>
-
-<section id="documents"><h3 class="bar"><b>&darr;</b>Documents à télécharger</h3>
+<p>Reimers et Gurevych (2019 ; 2020) · Chandola, Banerjee et Kumar (2009) · Weisburd (2015) · Lum et Isaac (2016) · OMS (2016), INSPIRE.</p></div><div class="pn"><a href="#/glossaire">← Glossaire</a><a href="#/documents">Documents →</a></div></div></section>
+<section class="view" id="v-documents" hidden><div class="w"><a class="back" href="#/">&#8592; Portail</a><h2><span class="n">&#8595;</span>Documents &#224; t&#233;l&#233;charger</h2><div class="sheet">
+<p>Les deux versions du dossier, au format Word : la version condens&#233;e, pens&#233;e pour la relecture rapide, et le document complet avec toutes les annexes, le glossaire, les r&#233;f&#233;rences et le code.</p>
 <div class="dl-grid">
-<a class="dl" href="docs/Dossier_SIPDMS_synthese.docx" download><b>Dossier — synthèse</b><span>version condensée du dossier · .docx</span></a>
-<a class="dl" href="docs/Dossier_SIPDMS_CAY_TleC.docx" download><b>Dossier — original</b><span>document complet · .docx</span></a>
+<a class="dl" href="docs/Dossier_SIPDMS_synthese.docx" download><b>Dossier &#8212; synth&#232;se</b><span>version condens&#233;e du dossier &#183; .docx</span></a>
+<a class="dl" href="docs/Dossier_SIPDMS_CAY_TleC.docx" download><b>Dossier &#8212; original</b><span>document complet &#183; .docx</span></a>
 </div>
-<p style="font-size:14px;color:var(--mute)">Le dossier complet (annexes, glossaire, références, code) est disponible en version Word.</p>
-</section>
+<p style="font-size:15px;color:var(--mute)">Le dossier complet comprend les six annexes, le glossaire, les sources et l&#8217;esquisse du code.</p>
+</div><div class="pn"><a href="#/sources">&#8592; Sources</a><a href="#/">Retour au portail</a></div></div></section>
 </main>
-<footer>SIPDMS · CAY · Terminale C · 2026–2027 · Données fictives, prototype pédagogique<br><i>« La technologie ne décide pas à la place de l'humain : elle lui permet de voir plus tôt, de comprendre mieux et de prévenir plus efficacement. »</i></footer>
-<script src="script.js"></script></body></html>
+<div class="foot">SIPDMS · CAY · Terminale C · 2026–2027 · Données fictives, prototype pédagogique<br><i>« La technologie ne décide pas à la place de l'humain : elle lui permet de voir plus tôt, de comprendre mieux et de prévenir plus efficacement. »</i></div>
+<script>document.querySelectorAll('.tabs button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('.tabs button, .pane').forEach(function (e) { e.classList.remove('on'); });
+    b.classList.add('on');
+    document.getElementById(b.dataset.t).classList.add('on');
+  });
+});
+
+var ids = ['g', 'r', 'i', 'c'];
+function calc() {
+  var v = ids.map(function (k) { return +document.getElementById(k).value; });
+  ids.forEach(function (k, n) { document.getElementById(k + 'v').textContent = v[n]; });
+  var p = v[0] * (v[1] + v[2] + v[3]);
+  var conf = p >= 12 ? 'élevé' : p >= 5 ? 'moyen' : 'faible';
+  var ind = v[2] < 2 ? ' · avec une seule source : aucune alerte de tendance (règle d\'indépendance)' : '';
+  document.getElementById('out').textContent = 'Priorité de situation = ' + p + ' · confiance ' + conf + ind;
+}
+ids.forEach(function (k) { document.getElementById(k).addEventListener('input', calc); });
+calc();
+
+var ORDER=['prevention', 'detail', 'preuve', 'ethique', 'faq', 'annexes', 'glossaire', 'sources', 'documents'],TT={'prevention': 'Le cas concret', 'detail': 'Fonctionnement', 'preuve': 'La preuve', 'ethique': 'Éthique et cadre légal', 'faq': 'FAQ du jury', 'annexes': 'Annexes', 'glossaire': 'Glossaire', 'sources': 'Sources', 'documents': 'Documents'};
+function route(){var h=location.hash.replace(/^#\/?/,'')||'home';if(ORDER.indexOf(h)<0)h='home';
+document.querySelectorAll('.view,.home').forEach(function(v){v.hidden=(v.id!=='v-'+h&&!(h==='home'&&v.classList.contains('home')));});
+document.querySelectorAll('.pills a').forEach(function(a){a.classList.toggle('on',a.dataset.k===h);});
+document.title=(TT[h]?TT[h]+' · ':'')+'SIPDMS';window.scrollTo(0,0);}
+window.addEventListener('hashchange',route);route();
+</script></body></html>
